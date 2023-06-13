@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CaveTrigger : MonoBehaviour
+public class DoorbellTrigger : MonoBehaviour
 {
-    AudioSource caveAmbiance;
+    AudioSource doorBell;
 
     // Start is called before the first frame update
     void Start()
     {
-        caveAmbiance = GetComponent<AudioSource>();
+        doorBell = GetComponent<AudioSource>();
 
     }
 
@@ -21,11 +21,6 @@ public class CaveTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        caveAmbiance.Play();
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        caveAmbiance.Stop();
+        doorBell.Play();
     }
 }
